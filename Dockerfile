@@ -2,7 +2,8 @@
 FROM maven:3.8.2-jdk-8
 
 WORKDIR /bezkoder-app
+COPY pom.xml
 COPY . .
-RUN mvn clean install
+RUN mvn clean install -X
 
 CMD mvn spring-boot:run
