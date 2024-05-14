@@ -10,7 +10,7 @@ RUN mvn dependency:go-offline
 
 # Copy the rest of the project and build it
 COPY . .
-RUN mvn clean install
+RUN mvn clean install -X
 
 CMD mvn spring-boot:run
 
