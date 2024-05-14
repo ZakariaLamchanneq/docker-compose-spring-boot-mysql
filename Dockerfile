@@ -3,7 +3,7 @@ FROM maven:3.8.2-jdk-8
 WORKDIR /bezkoder-app
 
 # Copy only the pom.xml file first to leverage Docker cache
-COPY pom.xml .
+COPY bezkoder-app/pom.xml .
 
 # Install project dependencies
 RUN mvn dependency:go-offline
